@@ -1,4 +1,4 @@
-package tech.bts.precourse.exercises;
+package tech.bts.javaexamples;
 
 import static java.lang.Math.*;
 
