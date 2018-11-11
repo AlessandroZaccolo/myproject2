@@ -192,22 +192,24 @@ public class ListExercises {
         //      did in ex 15 for every index in the list.
 
 
-        for (int i = 0; i <= (numbers.size() - 1); i++){
-            int oldPos0 = i;
-            int sort0 = numbers.get(oldPos0);
-            int newPos0 = oldPos0;
 
-            for (int x = oldPos0; x <= (numbers.size() - 1); x++){
-                if (numbers.get(x) <= sort0){
-                    newPos0 = x;
-                    sort0 = numbers.get(x);
+        for (int i = 0; i <= (numbers.size() - 1); i++){
+            int preNum = numbers.get(i);
+            int nextInd = i;
+
+            for (int x = i; x <= (numbers.size() - 1); x++){
+                if (numbers.get(x) <= preNum){
+                    nextInd = x;
+                    preNum = numbers.get(x);
                 }
             }
-            int sort1 = sort0;
-            numbers.set(newPos0, numbers.get(oldPos0));
-            numbers.set(oldPos0, sort1);
+
+            int nextNum = preNum;
+            numbers.set(nextInd, numbers.get(i));
+            numbers.set(i, nextNum);
 
         }
+
     }
 }
 
