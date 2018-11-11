@@ -208,7 +208,6 @@ public class ListExercises {
             numbers.set(oldPos0, sort1);
 
         }
-
     }
 }
 
