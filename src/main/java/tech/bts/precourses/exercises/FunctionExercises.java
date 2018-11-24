@@ -118,9 +118,13 @@ public class FunctionExercises {
     /** Returns a string that is similar to `text`, but replaces the first occurrence of `find` with `replace` */
     private static String replace(String text, String find, String replace) {
 
-        String result = "";
+        String result = text;
 
-        result = text.replaceFirst(find, replace);
+        if (text.indexOf(find) != -1){
+            result = text.substring(0, text.indexOf(find))
+                    + replace +
+                    text.substring((text.indexOf(find)+ find.length()), text.length());
+        }
 
         return result;
     }
